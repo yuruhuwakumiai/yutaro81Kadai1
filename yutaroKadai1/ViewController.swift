@@ -9,37 +9,26 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var textField1: UITextField!
-    @IBOutlet weak var textField2: UITextField!
-    @IBOutlet weak var textField3: UITextField!
-    @IBOutlet weak var textField4: UITextField!
-    @IBOutlet weak var textField5: UITextField!
-    
-    @IBOutlet weak var label: UILabel!
-    
-    
+    @IBOutlet weak private var textField1: UITextField!
+    @IBOutlet weak private var textField2: UITextField!
+    @IBOutlet weak private var textField3: UITextField!
+    @IBOutlet weak private var textField4: UITextField!
+    @IBOutlet weak private var textField5: UITextField!
+    @IBOutlet weak private var label: UILabel!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
 
-    @IBAction func pressButton(_ sender: Any) {
-      
+    @IBAction private func pressButton(_ sender: Any) {
     let number1 = (textField1.text! as NSString).intValue
     let number2 = (textField2.text! as NSString).intValue
     let number3 = (textField3.text! as NSString).intValue
     let number4 = (textField4.text! as NSString).intValue
     let number5 = (textField5.text! as NSString).intValue
-    
+
         let result = number1 + number2 + number3 + number4 + number5
-        
         label.text = "\(result)"
-        
     }
-    
-    
-    
-    
-
 }
-
