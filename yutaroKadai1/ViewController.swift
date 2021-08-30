@@ -15,17 +15,12 @@ class ViewController: UIViewController {
     @IBOutlet weak private var textField5: UITextField!
     @IBOutlet weak private var label: UILabel!
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
-    }
-
     @IBAction private func pressButton(_ sender: Any) {
-    let number1 = (textField1.text! as NSString).intValue
-    let number2 = (textField2.text! as NSString).intValue
-    let number3 = (textField3.text! as NSString).intValue
-    let number4 = (textField4.text! as NSString).intValue
-    let number5 = (textField5.text! as NSString).intValue
+        let number1 = Int(textField1.text!) ?? 0
+        let number2 = Int(textField2.text!) ?? 0
+        let number3 = Int(textField3.text!) ?? 0
+        let number4 = Int(textField4.text!) ?? 0
+        let number5 = Int(textField5.text!) ?? 0
 
         let result = number1 + number2 + number3 + number4 + number5
         label.text = "\(result)"
